@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="Jcss/navBar.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+
+    <script>
+        function submitMarks(){
+            //var rn=document.getElementById("rollNo").value;
+            //<a class="nav-link" href="ResultsForm.html">HOME</a>        
+            var total=0;
+            var m1=parseInt(document.getElementById("mk1").value);
+            var m2=parseInt(document.getElementById("mk2").value);
+            var m3=parseInt(document.getElementById("mk3").value);
+            var m4=parseInt(document.getElementById("mk4").value);
+            var m5=parseInt(document.getElementById("mk5").value);
+            total+=(m1+m2+m3+m4+m5);
+            document.getElementById("sum").value=total;
+        }
+
+    </script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html">RESULTS</a>
+      
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="help.html">HELP</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#">ABOUT US</a>
+          </li>
+        </ul>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <form class="form-inline" action="/action_page.php">
+            <input class="form-control mr-sm-2" type="text" placeholder="Don't Search">
+            <button class="btn btn-success" type="submit">Search</button>
+            </form>
+        </nav>
+    </nav>
+
+    <br><br><br><br>
+    <br><br><br><br>
+
+
+
+    <div class="container">
+        <form>
+            <h3><strong>ENTER MARKS</strong></h3>
+            <input class="marks" type="text" placeholder="ADE" id="mk1"><br><br>
+            <input class="marks" type="text" placeholder="COA" id="mk2"><br><br>
+            <input class="marks" type="text" placeholder="COSM" id="mk3"><br><br>
+            <input class="marks" type="text" placeholder="DATA STRUCTURE" id="mk4"><br><br>
+            <input class="marks" type="text" placeholder="C++" id="mk5"><br><br>
+
+            <h4><strong>total:</strong><input type="text" size="1" id="sum"><br><br></h4>
+            
+            <input id="myResults" type="button" class="btn btn-success btn-block" value="Submit" onclick="submitMarks();">
+        </form>
+    </div>
+  <br><br><br><br>
+  <br><br><br><br>  
+
+</body>
+</html>

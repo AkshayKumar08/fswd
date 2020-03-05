@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="Jcss/navBar.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+
+    <script>
+        function submitRollNo(){
+            //var rn=document.getElementById("rollNo").value;
+            //<a class="nav-link" href="ResultsForm.html">HOME</a>
+        
+
+        document.getElementById("myResults").onclick = function () {
+            location.href = "ResultsForm.html";
+        };
+    }
+
+    </script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">RESULTS</a>
+      
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="help.html">HELP</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#">ABOUT US</a>
+          </li>
+        </ul>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <form class="form-inline" action="/action_page.php">
+            <input class="form-control mr-sm-2" type="text" placeholder="Don't Search">
+            <button class="btn btn-success" type="submit">Search</button>
+            </form>
+        </nav>
+    </nav>
+
+    <br><br><br><br>
+    <br><br><br><br>
+
+
+
+    <div class="container">
+        <form>
+            <h3><strong>ENTER YOUR ROLL NUMBER </strong></h3>
+            <input type="text" placeholder="Enter Roll Number" id="rollNo"><br><br>
+
+
+            <h3><strong>ENTER YOUR YEAR </strong></h3>
+            <select id="btech" name="btech">
+            <option>1st year</option>
+            <option>2nd year</option>
+            <option>3rd year</option>
+            <option>4th year</option>
+            </select>
+            <br><br>
+            <input id="myResults" type="button" class="btn btn-success btn-block" value="Submit" onclick="submitRollNo();">
+        </form>
+    </div>
+  <br><br><br><br>
+  <br><br><br><br>  
+
+</body>
+</html>
